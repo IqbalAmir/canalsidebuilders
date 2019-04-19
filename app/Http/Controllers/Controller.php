@@ -14,7 +14,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
 
-    public function ()
+    public function index()
     {
       $title = 'Welcome To Canalside Builders';
       return view('pages.index')->with('title',$title);
