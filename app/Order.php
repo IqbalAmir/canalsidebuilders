@@ -22,7 +22,7 @@ class Order extends Model
         return $this->belongsTo('App\Account'); //relationship created for account with order
       }
 
-  
+
 
       public function service(){
         return $this->belongsTo('App\Service'); //relationship created for account with order

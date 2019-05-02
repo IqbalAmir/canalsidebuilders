@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -20,17 +22,16 @@
                     <table class="table table-striped">
                       <tr>
 
-                         @if(count($accounts) > 0)
+
                            @foreach ($accounts as $account)
                              <div class="well">
-                               <h3><a href="/canalsidebuilders/public/accounts/{{$account->id}}">Personal Information</a></h3>
+                               <h3><a href="/canalsidebuilders/public/accounts/{{$account->id}}">Personal Details</a></h3>
                                </div>
                            @endforeach
                            {{$accounts->links()}}
-                         @else
-                           <p>No details found</p>
-                         @endif
+
                        @endsection
+
                          </tr>
                      </div>
                  </div>

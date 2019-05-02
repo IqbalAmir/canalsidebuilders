@@ -19,7 +19,7 @@ class AccountController extends Controller
    */
   public function __construct() // constructor runs when the class in called
   {
-      $this->middleware('auth', ['except' => ['index', 'show']]); // blocks everything in the dashboard (home) if the user is not authenticated , passing arrays makes exceptions on the web page
+      $this->middleware('auth'); // blocks everything in the dashboard (home) if the user is not authenticated , passing arrays makes exceptions on the web page
   }
 
 

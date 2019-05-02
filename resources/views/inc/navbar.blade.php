@@ -23,7 +23,6 @@
             </ul>
 
             <ul class="nav navbar-nav">
-              <li><a href="/canalsidebuilders/public/">Home</a></li>
               <li><a href="/canalsidebuilders/public/about">About Us</a></li>
               <li><a href="/canalsidebuilders/public/services">Services</a></li>
               <li><a href="/canalsidebuilders/public/posts">Reviews</a></li>

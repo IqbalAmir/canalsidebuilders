@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Order;
-use App\Account;
 use App\User;
 use App\Service;
-use DB;
+use App\Account;
+
 
 class OrdersController extends Controller
 {
@@ -18,7 +18,7 @@ class OrdersController extends Controller
    */
   public function __construct() // constructor runs when the class in called
   {
-      $this->middleware('auth', ['except' => ['index', 'show']]); // blocks everything  if the user is not authenticated
+      $this->middleware('auth');// blocks everything  if the user is not authenticated
   }
 
 
@@ -60,8 +60,8 @@ class OrdersController extends Controller
       //create Post
       $orders = new Order;
       $orders->user_id = auth()->user()->id;
-      $orders->account_id = auth()->account()->id;
-      $orders->service_id = auth()->service()->id;
+      $orders->account_id =\Auth::user()->account_id;
+      $orders->service_id = \Auth::user()->service_id;
       $orders->issue = $request->input('issue');
       $orders->save();
 

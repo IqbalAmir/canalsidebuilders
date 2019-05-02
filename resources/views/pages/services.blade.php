@@ -5,15 +5,28 @@
 
     <h1>{{$title}}</h1>
       <a href="/canalsidebuilders/public/orders/create" class="btn btn-primary">Create an Order</a>
-    <p>These are the following services we offer</p>
-    @if(count($services) > 0)
-      <ul class="list-group">
-         @foreach($services as $service)
-          <li class="list-group-item">{{$service}}</li>
-        @endforeach
 
-      </ul>
+    <content>
+
+        <h2> These are the following services we offer </h2>
+
+        <li> Drives </li>
+        <li>Roofing </li>
+        <li> Rendering </li>
+        <li>Fencing </li>
+        <li> Windows, Doors and Conservatives</li>
+        <li> Brick Layering </li>
+        <li>Plumbing</li>
 
 
-    @endif
-    @endsection
+
+
+
+
+
+
+
+
+
+
+@endsection

@@ -35,5 +35,5 @@ class User extends Authenticatable
       return $this->hasMany('App\Order'); //user has many orders  This creates the relationship with the user and the orders
     }
 
-  
+
 }
