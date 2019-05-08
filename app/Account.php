@@ -22,4 +22,6 @@ class Account extends Model
         return $this->belongsTo('App\Order'); //account has many orders  This creates the relationship with the user and the orders
       }
 
+
+
 }

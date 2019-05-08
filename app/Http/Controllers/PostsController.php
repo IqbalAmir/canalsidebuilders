@@ -16,7 +16,7 @@ class PostsController extends Controller
    */
   public function __construct() // constructor runs when the class in called
   {
-      $this->middleware('auth', ['except' => ['index', 'show']]); // blocks everything  if the user is not authenticated
+      $this->middleware('auth', ['except' => ['index', 'show']]); // blocks everything except index page if the user is not authenticated
   }
 
 
@@ -27,12 +27,6 @@ class PostsController extends Controller
      */
     public function index()
     {
-
-      // $posts = Post::all(); //obtains all from DB
-      //return $post = Post::where('title','Post Two')->get(); // obtains a specfic record
-      // $posts = DB::select('SELECT * FROM posts'); // using sql querys
-      // $posts = Post::orderBy('title','desc')->take(1)->get(); // only gives you a limited amount of records in the DB
-      //$posts = Post::orderBy('title','desc')->get();   // this is getting info from database by using Eloquent
 
 
       $posts = Post::orderBy('created_at','desc')->paginate(10);

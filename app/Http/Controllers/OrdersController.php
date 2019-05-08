@@ -60,7 +60,8 @@ class OrdersController extends Controller
       //create Post
       $orders = new Order;
       $orders->user_id = auth()->user()->id;
-      $orders->account_id =\Auth::user()->account_id;
+      $account = Account::find($request->id);
+      $orders->account()->associate($account);
       $orders->service_id = \Auth::user()->service_id;
       $orders->issue = $request->input('issue');
       $orders->save();
