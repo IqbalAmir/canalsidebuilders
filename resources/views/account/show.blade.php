@@ -2,15 +2,19 @@
 
 @section('content')
 
+    <a href="/canalsidebuilders/public/accounts" class="btn btn-default">Go Back</a>
+    <br>
+    <br>
+
+
+    <div class="jumbotron text-center">
+
    @if(Auth::user()->id == $account->user_id)
       <h1>Personal Information</h1>
-      <a href="/canalsidebuilders/public/accounts" class="btn btn-default">Go Back</a>
 
 
 
 
-
-     <div>
     <p> Title: {{$account->title}}</p>
     <p> First Name: {{$account->firstname}}</p>
     <p> Surname: {{$account->surname}}</p>

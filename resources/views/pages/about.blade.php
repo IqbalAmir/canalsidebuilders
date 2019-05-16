@@ -4,13 +4,13 @@
   <h1>{{$title}}</h1>
 
 
-  <content class = >
 
+  <div class = " jumbotron text-center">
     <h2> Canalside Builders </h2>
 
     <p> We specialise in  house building and property improvement.</p>
 
-  </content>
+
 
   <br>
   <br>

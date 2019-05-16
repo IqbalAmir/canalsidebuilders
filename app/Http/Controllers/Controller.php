@@ -16,7 +16,7 @@ class Controller extends BaseController
 
     public function index()
     {
-      $title = 'Welcome To Canalside Builders';
+      $title = 'Canalside Builders';
       return view('pages.index')->with('title',$title);
     }
 

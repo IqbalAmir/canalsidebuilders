@@ -2,7 +2,12 @@
 
 @section('content')
   <h1>What Our Customers Have to Say...</h1>
+  <br>
+  <div class="text-center">
   <a href="/canalsidebuilders/public/home" class="btn btn-primary">Go To Your Reviews</a>
+  <br>
+  <br>
+  </div>
 
   @if(count($posts) > 0)
     @foreach ($posts as $post)

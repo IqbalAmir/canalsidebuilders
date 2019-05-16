@@ -1,12 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
- <div class="jumbotron text-center">
+ <div class="jumbotron">
 
    <h1>{{$title}}</h1>
-   <p>Specialists in House Building and Property Improvement</p>
+   <p class="text-center">Specialists in House Building and Property Improvement</p>
+     <br>
    @if(Auth::guest())
-   <p><a class="btn btn-primary btn-lg" href="/canalsidebuilders/public/login" role="button">Login</a> <a class="btn btn-success btn-lg" href="/canalsidebuilders/public/register" role="button">Register</a> </p>
+   <a class="btn btn-primary btn-lg" href="/canalsidebuilders/public/login" role="button">Login</a>
+    <br>
+     <br>
+         <a class="btn btn-success btn-lg" href="/canalsidebuilders/public/register" role="button">Register</a>
+
    @endif
 
 

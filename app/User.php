@@ -32,8 +32,10 @@ class User extends Authenticatable
     }
 
     public function orders(){
-      return $this->hasMany('App\Order'); //user has many orders  This creates the relationship with the user and the orders
+      return $this->hasMany('App\Order'); //user has many orders. This creates the relationship with the user and the orders.
     }
+
+
 
 
 }

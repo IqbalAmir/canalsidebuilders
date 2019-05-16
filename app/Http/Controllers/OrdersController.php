@@ -18,7 +18,7 @@ class OrdersController extends Controller
    */
   public function __construct() // constructor runs when the class in called
   {
-      $this->middleware('auth');// blocks everything  if the user is not authenticated
+      $this->middleware('auth');// blocks everything if the user is not authenticated
   }
 
 
@@ -27,7 +27,7 @@ class OrdersController extends Controller
   {
       $user_id = auth()->user()->id; //logged in user's ID
       $user = User::find($user_id); // user model and find by the user id
-      return view('order.index')->with('order', $user->orders); // return view with user posts as we have made the relationship for this
+      return view('order.index')->with('order', $user->orders); // return view with user orders as we have made the relationship for this
   }
 
 
@@ -38,7 +38,7 @@ class OrdersController extends Controller
    */
   public function create()
 {
-  $services =  Service::pluck('service','id');
+  $services =  Service::pluck('service','id'); // shows info from services table in form
       return view('order.create')->with('services',$services);
   }
 
@@ -62,7 +62,6 @@ class OrdersController extends Controller
       $orders->user_id = auth()->user()->id;
       $account = Account::find($request->id);
       $orders->account()->associate($account);
-      $orders->service_id = \Auth::user()->service_id;
       $orders->issue = $request->input('issue');
       $orders->save();
 

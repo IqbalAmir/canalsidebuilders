@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+use App\Post; // brings in the post model
 use DB;
 
 
@@ -29,7 +29,9 @@ class PostsController extends Controller
     {
 
 
-      $posts = Post::orderBy('created_at','desc')->paginate(10);
+        // putting the table into a variable ('$posts' and passing it into a view ('with')
+
+      $posts = Post::orderBy('created_at','desc')->paginate(10); // able to use Post as this is brought in by the post model. Able to use the date in the post table. Using Eloquent
       return view('posts.index')->with('posts', $posts);
     }
 
@@ -61,7 +63,7 @@ class PostsController extends Controller
         $post = new Post;
         $post->title = $request->input('title');
         $post->body = $request->input('body');
-        $post->user_id = auth()->user()->id;
+        $post->user_id = auth()->user()->id; // get the currently logged in user and put their user id in the post table
         $post->save();
 
         return redirect ('/posts')->with('success', 'Post Created');
