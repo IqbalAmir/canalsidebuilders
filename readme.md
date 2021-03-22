@@ -23,4 +23,4 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 ## About
 
-Web App created for a building company for the services they offer, allowing users to fully interact with the application.
+Web App created using the Laravel Framework for a building company for the services they offer, allowing users to fully interact with the application.
